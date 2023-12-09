@@ -3,10 +3,9 @@ import type { Metadata } from 'next';
 import { Source_Code_Pro } from 'next/font/google';
 
 import './globals.css';
-import Navbar from '@/components/navbar';
-import Footer from '@/components/footer';
 import { Providers } from '../lib/StoreProvider';
-import BgElements from '@/components/bgElements.component';
+import Navbar from '@/components/navbar';
+import Bg from '@/components/bg';
 
 const sourceCodePro = Source_Code_Pro({
   subsets: ['latin'],
@@ -25,17 +24,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${sourceCodePro.className} bg-white relative`}>
-        <Providers>
+      <Providers>
+        <body className={`${sourceCodePro.className} bg-white relative`}>
           <Navbar />
-          <BgElements />
+          <Bg />
 
-          <main className="px-10 max-w-7xl mx-auto">{children}</main>
-        </Providers>
-        {/* <Navbar /> */}
-
-        {/* <Footer /> */}
-      </body>
+          <main className="px-10 mx-auto container h-[calc(100vh-148px)]">
+            <h1 hidden>Ostap Klysa Frontend Developer</h1>
+            {children}
+          </main>
+        </body>
+      </Providers>
     </html>
   );
 }

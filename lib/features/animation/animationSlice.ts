@@ -15,19 +15,6 @@ export const animation = createSlice({
     onNavbarAnimated: (state, action: PayloadAction<boolean>) => {
       state.navbarIsAnimated = action.payload;
     },
-    // reset: () => initialState,
-    // increment: (state) => {
-    //   state.value += 1;
-    // },
-    // decrement: (state) => {
-    //   state.value -= 1;
-    // },
-    // incrementByAmount: (state, action: PayloadAction<number>) => {
-    //   state.value += action.payload;
-    // },
-    // decrementByAmount: (state, action: PayloadAction<number>) => {
-    //   state.value -= action.payload;
-    // },
   },
 });
 

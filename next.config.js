@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: false,
   images: {
     domains: [
-      'buffer.com',
+      'myfreedo.in',
       'upwork-usw2-prod-agora-file-storage.s3.us-west-2.amazonaws.com',
     ],
   },

@@ -1,3 +1,4 @@
+import bannerPosition from './features/banner/bannerSlice';
 import { configureStore } from '@reduxjs/toolkit';
 import animation from './features/animation/animationSlice';
 // import { setupListeners } from '@reduxjs/toolkit/dist/query';
@@ -5,6 +6,7 @@ import animation from './features/animation/animationSlice';
 export const store = configureStore({
   reducer: {
     animation,
+    bannerPosition,
   },
 });
 

@@ -1,3 +1,37 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.snap-parent-y-mandatory {
+  scroll-snap-type: y mandatory;
+  overflow: scroll;
+  height: calc(100vh - 123px);
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-parent-y-proximity {
+  scroll-snap-type: y proximity;
+  overflow: scroll;
+  height: calc(100vh - 123px);
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-child-start {
+  opacity: 0.5;
+  z-index: 10;
+  scroll-snap-align: start;
+  flex: none;
+}
+
+.snap-child-center {
+  /* opacity: 0.5; */
+  z-index: 10;
+  scroll-snap-align: center;
+  flex: none;
+}

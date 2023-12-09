@@ -16,6 +16,11 @@ const Navbar = () => {
 
   const pathname = usePathname();
 
+  const [navbarText, setNavbarText] = useState([
+    'Hello',
+    'Nice to meet you',
+    '',
+  ]);
   const activeClass = 'bg-[#10544e] text-white';
 
   const [animation, setAnimation] = useState(false);
@@ -34,11 +39,12 @@ const Navbar = () => {
       <Link href={'/'} className="font-bold spac text-xl tracking-wide my-auto">
         {'<'}
         <Typed
-          strings={['Hello', 'Nice to meet you', 'Portfolio']}
+          strings={navbarText}
           typeSpeed={110}
           backSpeed={50}
+          cursorChar="/"
         />
-        {'/>'}
+        {'>'}
       </Link>
 
       {animation && (
